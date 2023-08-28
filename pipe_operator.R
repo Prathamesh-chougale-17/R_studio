@@ -1,0 +1,6 @@
+data_13 = mtcars %>% select(1:9) %>% filter(hp>40) %>% arrange(cyl)
+View(storms)
+data_14 = slice(storms,1:100)
+data_15 = select(data_14,-1,-3,-8)
+data_16 = arrange(data_15,wind)
+data_17 = storms %>% group_by(name) %>% summarise(avg=mean(wind))
